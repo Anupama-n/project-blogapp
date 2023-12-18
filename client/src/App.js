@@ -7,6 +7,7 @@ import Register from "./pages/register/Register.jsx";
 import Settings from "./pages/settings/Settings.jsx";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import './app.css';
 import {
   createBrowserRouter as Router,
   RouterProvider,
