@@ -67,7 +67,12 @@ router.delete("/:id", async (req, res) => {
 router.get("/:id", async (req, res) => {
     try {
       const post = await Post.findById(req.params.id);
-      res.status(200).json(post);
+          // Update the view count
+    post.views += 0.5;
+
+    // Save the updated post
+    await post.save();
+    res.status(200).json(post);
     } catch (err) {
       res.status(500).json(err);
     }

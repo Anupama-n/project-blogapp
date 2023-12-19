@@ -45,7 +45,7 @@ export default function Post({ post }) {
       };
 
   return (
-    <div className='post' onClick={handleView}>
+    <div className='post'>
       {post.photo && (
         <img
           className='postImg'
@@ -77,7 +77,7 @@ export default function Post({ post }) {
         <IconButton color="default" aria-label="view">
           <VisibilityIcon />
         </IconButton>
-        <span>{viewCount}</span>
+        <span>{Math.ceil(viewCount)}</span>
       </div>
       </div>
     </div>
