@@ -22,7 +22,15 @@ const PostSchema = new mongoose.Schema(
         type: Array,
         required: false,
       },
-
+      likes: { 
+        type: Number, 
+        default: 0 
+      },
+      views: {
+        type: Number,
+        default: 0,
+      } // Initialize likes with a default value of 0
+    
 },
 { timestamps: true }
 );

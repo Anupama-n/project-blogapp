@@ -20,6 +20,15 @@ export default function Login() {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
+      if (err.response) {
+        console.error("Server responded with an error:", err.response.data);
+      }
+      else if (err.request) {
+        console.error("No response received from the server");
+      } 
+      else {
+        console.error("Error setting up the request:", err.message);
+      }
     }
   };
 
