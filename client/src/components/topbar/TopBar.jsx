@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import './TopBar.css'
-import moon from './moon.png'
 import { useContext } from 'react'
 import { Context } from '../../context/Context'
 
@@ -28,8 +27,9 @@ export default function TopBar() {
               </Link>
             </li>
 
-            <li className="topListItem">ABOUT</li>
-            <li className="topListItem">CONTACT</li>
+            <Link className="topListItem" to="/about"> ABOUT </Link>
+            <Link className="topListItem" to="/contact"> CONTACT </Link>
+            
 
             <li className="topListItem">
 
@@ -66,9 +66,8 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        
+        <i className="topSearchIcon fas fa-search"></i>
       </div>
-    
     </div>
   )
 }

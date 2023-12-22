@@ -1,5 +1,4 @@
 
-import ReactDOM from 'react-dom';
 import TopBar from "./components/topbar/TopBar";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login.jsx";
@@ -7,6 +6,7 @@ import Register from "./pages/register/Register.jsx";
 import Settings from "./pages/settings/Settings.jsx";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import Contact from "./pages/contact/contact.jsx";
 import {
   createBrowserRouter as Router,
   RouterProvider,
@@ -15,6 +15,7 @@ import {
   Link,
   Navigate
 } from "react-router-dom";
+import About from './pages/About/about';
 import { Context } from './context/Context.js';
 import { useContext } from 'react';
 
@@ -29,6 +30,19 @@ function App() {
         <main>
         <TopBar/>
         <Home/>
+        </main>
+      }/>
+      
+      <Route path="/about" element={
+        <main>
+          <TopBar/>
+          <About/>
+        </main>
+      }/>
+      <Route path="/contact" element={
+        <main>
+          <TopBar/>
+          <Contact/>
         </main>
       }/>
       <Route path={'/login'} element={
