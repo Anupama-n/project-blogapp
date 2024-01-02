@@ -1,4 +1,5 @@
 .sidebar {
+  font-family: cursive;
     flex: 3;
     height: fit-content;
     margin: 20px;
